@@ -1,0 +1,191 @@
+/* General Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+/* Dark Background Styling */
+body {
+    background: url('img/sign.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #0a0a0a; /* Fallback dark color */
+}
+
+/* Blur Effect for Background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: -1;
+}
+
+/* Form Styling */
+form {
+    width: 450px;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 40px 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* Title */
+form h3 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+}
+
+/* Profile Picture Container */
+.profile-pic-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 10px auto;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #30bb4c;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* Upload Icon */
+.upload-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: linear-gradient(135deg, #0aa5e3, #007bb5);
+    color: white;
+    border-radius: 50%;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+.upload-icon:hover {
+    background: linear-gradient(135deg, #007bb5, #0aa5e3);
+}
+
+/* Input Fields */
+input, select {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-top: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder Styling */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Select Dropdown */
+select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Focus Effects */
+input:focus, select:focus {
+    border-color: #0aa5e3;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Submit Button */
+button {
+    margin-top: 20px;
+    width: 100%;
+    background: linear-gradient(135deg, #3D405B, #007bb5);
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #007bb5, #3D405B);
+    transform: scale(1.05);
+}
+
+/* Hide File Input */
+#file-input {
+    display: none;
+}
+
+/* Signup Link */
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+.signup-link a {
+    color: #0aa5e3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.signup-link a:hover {
+    color: #ffffff;
+}
+
+/* Admin Button */
+.admin-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #E5CFF7, #D4A5A5);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+}
+
+.admin-button:hover {
+    background: linear-gradient(135deg, #D4A5A5, #E5CFF7);
+    transform: scale(1.1);
+}
